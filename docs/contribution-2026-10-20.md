@@ -24,6 +24,8 @@ The tool does not request or store private keys.
 - Repository: https://github.com/totomal/technocore-contribution-kit
 - Live tool: https://totomal.github.io/technocore-contribution-kit/
 - Existing guide: https://totoflop.vercel.app/
+- X post:https://x.com/totomal090202/status/2112503236330446956?s=20
+
 
 ## Disclaimer
 
