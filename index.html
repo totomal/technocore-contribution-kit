@@ -1,224 +1,49 @@
 <!doctype html>
 
-  
-  
-  Technocore Contribution Kit
-  
-    body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 24px;
-      font-family: system-ui, sans-serif;
-      line-height: 1.6;
-      color: #222;
-    }
+Technocore Contribution Kit
 
-    h1 {
-      line-height: 1.3;
-    }
+Technocore Contribution Kit
 
-    .warning {
-      padding: 14px;
-      background: #fff3cd;
-      border: 1px solid #e0b84c;
-      border-radius: 8px;
-    }
+Technocoreへの貢献内容を、日本語・英語で整理するコミュニティツールです。
 
-    label {
-      display: block;
-      margin-top: 16px;
-      font-weight: bold;
-    }
+重要
+このツールはFLOP Labs公式ではありません。
+エアドロップ、報酬、トークン配布、選考を保証しません。
+秘密鍵、シードフレーズ、パスワード、APIキーは入力しないでください。
 
-    input, textarea, select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      margin-top: 5px;
-      font-size: 16px;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-    }
+貢献内容を入力
 
-    textarea {
-      min-height: 100px;
-    }
+Agent名
 
-    button {
-      margin-top: 20px;
-      padding: 12px 18px;
-      font-size: 16px;
-      color: white;
-      background: #635bff;
-      border: 0;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+公開DID
 
-    button:hover {
-      background: #4941d8;
-    }
+貢献内容
 
-    pre {
-      white-space: pre-wrap;
-      padding: 14px;
-      background: #f4f4f4;
-      border-radius: 6px;
-      overflow-wrap: anywhere;
-    }
+公開URL
 
-    .section {
-      margin-top: 28px;
-    }
+下書きを作成
 
-    .small {
-      color: #666;
-    }
-  
+生成結果
+ここに結果が表示されます。
 
-  Technocore Contribution Kit
+function generate() {
+  const agent = document.getElementById("agent").value;
+  const did = document.getElementById("did").value;
+  const description = document.getElementById("description").value;
+  const url = document.getElementById("url").value;
 
-  
-    Technocoreへの貢献内容を、日本語・英語で整理するコミュニティツールです。
-  
-
-  
-    重要：
-    このツールはFLOP Labs公式ではありません。
-    秘密鍵、シードフレーズ、パスワード、APIキーは入力しないでください。
-  
-
-  
-    貢献内容を入力
-
-    Agent名
-    
-
-    公開DID
-    
-
-    貢献タイプ
-    
-      Tool / ツール
-      Guide / ガイド
-      Translation / 翻訳
-      Research / 調査
-      Integration / 連携
-      Bug fix / バグ修正
-    
-
-    何を作った・改善したか
-    
-
-    公開URL
-    
-
-    証拠URL（任意）
-    
-
-    下書きを作成
-  
-
-  
-    日本語の貢献文
-    入力して「下書きを作成」を押してください。
-
-    English contribution text
-    Enter your contribution and generate a draft.
-
-    X投稿の下書き
-    ここにX投稿の下書きが表示されます。
-
-    活動ログ
-    ここに活動ログが表示されます。
-  
-
-  
-    生成された文章は下書きです。公開前に内容を確認してください。
-    同じ内容の連投や、複数DIDによる水増しには使用しないでください。
-  
-
-  
-    function getValue(id) {
-      return document.getElementById(id).value.trim();
-    }
-
-    function generate() {
-      const agent = getValue("agent") || "unnamed_agent";
-      const did = getValue("did") || "[公開DID]";
-      const type = getValue("type");
-      const description = getValue("description") || "[貢献内容]";
-      const url = getValue("url") || "[公開URL]";
-      const evidence = getValue("evidence") || "[証拠URL]";
-
-      const japanese =
+  const result =
 `Agent: ${agent}
 DID: ${did}
-貢献タイプ: ${type}
-
-${description}
-
-公開URL:
-${url}
-
-証拠URL:
-${evidence}
-
-この記録はコミュニティ向けの活動記録です。
-エアドロップや報酬を保証するものではありません。`;
-
-      const english =
-`Agent: ${agent}
-DID: ${did}
-Contribution type: ${type}
+Contribution:
 
 ${description}
 
 Public URL:
 ${url}
 
-Evidence URL:
-${evidence}
+This is a community contribution.
+It does not guarantee an airdrop or reward.`;
 
-This is a community contribution record.
-It does not guarantee an airdrop, reward, allocation, or selection.`;
-
-      const xPost =
-`I published a community tool for documenting useful Technocore contributions.
-
-Contribution type: ${type}
-Project: ${url}
-
-The tool helps users prepare public contribution records while keeping private keys local.
-
-This is not an official FLOP Labs product and does not guarantee airdrop eligibility.
-
-#Technocore #FLOP`;
-
-      const today = new Date().toISOString().slice(0, 10);
-
-      const log =
-`# Contribution Log
-
-- Date: ${today}
-- Agent: ${agent}
-- Public DID: ${did}
-- Type: ${type}
-- Description: ${description}
-- Project URL: ${url}
-- Evidence URL: ${evidence}
-
-##確認
-
-- [ ] 貢献内容は実際に存在する
-- [ ] 公開URLを確認した
-- [ ] 秘密情報を入力していない
-- [ ] 投稿前に文章を確認した
-- [ ] 同じ内容の連投ではない`;
-
-      document.getElementById("ja").textContent = japanese;
-      document.getElementById("en").textContent = english;
-      document.getElementById("xpost").textContent = xPost;
-      document.getElementById("log").textContent = log;
-    }
-  
+  document.getElementById("result").textContent = result;
+}
