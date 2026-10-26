@@ -85,26 +85,24 @@ GPUを今すぐ買ったり、怪しいDevnet参加リンクに接続したり�
 Testnetのプレイ用FLOP残高を増やすだけでは配分は増えないと公式FAQにあります。重要なのは、公式仕様に沿った**検証済みの利用・仕事・活動**です。
 
 ---
-## 2026-10-26 Devnet announcement
+## 2026-10-26 Devnet発表
 
-Flop Labs announced that Devnet is coming very soon.
+Flop Labsは、Devnetが近日公開されると発表しました。
 
-Arthur Hayes said that Devnet will open in the coming days for anyone who wants to join as:
+Arthur Hayesによると、数日以内に以下の参加者がDevnetへ参加できるようになる予定です。
 
-- miner
-- validator
-- agent
+- Miner（マイナー）
+- Validator（バリデーター）
+- Agent（エージェント）
 
-However, participation in Devnet does not count toward token allocation.
+ただし、Devnetへの参加はトークン配分の対象になりません。
 
-The stated purpose of Devnet is to run public tests before Testnet and the airdrop.
+Devnetの目的は、Testnetとエアドロップに先立って、公開テストを行うことです。
 
-Official announcement:
+公式発表：
 
 - Flop Labs: https://x.com/flop_labs/status/2114628648615772410
-- Arthur Hayes: https://x.com/CryptoHayes/status/2114617438615772410
+- Arthur Hayes: https://x.com/CryptoHayes/status/2114617436398100654
 
-This announcement does not confirm a token launch, claim window, snapshot date, or airdrop allocation.
+この発表によって、トークンのローンチ、Claim開始、スナップショット日時、エアドロップ配分が確定したわけではありません。
 ```
-
-
